@@ -55,9 +55,9 @@ def solution(clf, iddb):
 #     print(accuracy_score(trainY,testY))
 
 
-def calcAccuracy(path_model, iddb):
-    path_ = 'exp/db/db{}/'.format(iddb)
+def evakmeans(iddb):
+    path_model = 'exp/db/db{}/kmeans.pkl'.format(iddb)
     clf = pickle.load(open(path_model,'rb'))
     solution(clf,iddb)
 if __name__ == '__main__':
-    calcAccuracy(sys.argv[1],int(sys.argv[2]))
+    evakmeans(int(sys.argv[1]))

@@ -33,6 +33,7 @@ class Clustering():
                 connectivity=None, linkage='ward', memory=None, n_clusters=num,
                 pooling_func='deprecated').fit(features)
         pickle.dump(AggC, open(self.path_exp + 'AggC.pkl','wb'))
+
 if __name__ == '__main__':
     clf = Clustering(int(sys.argv[2]))
     if sys.argv[1] == 'kmeans':
